@@ -215,8 +215,8 @@ BO_ 780 ACC_HUD: 8 ADAS
 BO_ 800 XXX_9: 8 XXX
 
 BO_ 804 CRUISE: 8 PCM
- SG_ HUD_SPEED_KPH : 7|8@0+ (1,0) [0|255] "kph"  NEO
- SG_ HUD_SPEED_MPH : 15|8@0+ (1,0) [0|255] "mph"  NEO
+ SG_ HUD_SPEED_KPH : 7|8@0+ (1,0) [0|255] "kph" NEO
+ SG_ HUD_SPEED_MPH : 15|8@0+ (1,0) [0|255] "mph" NEO
  SG_ TRIP_FUEL_CONSUMED : 23|16@0+ (1,0) [0|255] "" NEO
  SG_ CRUISE_SPEED_PCM : 39|8@0+ (1,0) [0|255] "" NEO
  SG_ BOH2 : 47|8@0- (1,0) [0|255] "" NEO
@@ -258,7 +258,7 @@ BO_ 887 XXX_15: 8 XXX
 BO_ 888 XXX_16: 8 XXX
 
 BO_ 892 CRUISE_PARAMS: 8 PCM
- SG_ CRUISE_SPEED_OFFSET : 31|8@0- (0.1,0) [-128|127] "kph"  NEO
+ SG_ CRUISE_SPEED_OFFSET : 31|8@0- (0.1,0) [-128|127] "kph" NEO
 
 BO_ 923 XXX_18: 2 XXX
 
@@ -305,6 +305,7 @@ BO_TX_BU_ 506 : NEO,ADAS;
 BO_TX_BU_ 780 : NEO,ADAS;
 BO_TX_BU_ 829 : NEO,ADAS;
 
+
 CM_ SG_ 419 GEAR "10 = reverse, 11 = transition";
 CM_ SG_ 490 LONG_ACCEL "wheel speed derivative, noisy and zero snapping";
 CM_ SG_ 780 CRUISE_SPEED "255 = no speed";
@@ -319,5 +320,4 @@ VAL_ 506 CHIME 4 "double_chime" 3 "single_chime" 2 "continuous_chime" 1 "repeati
 VAL_ 506 FCW 3 "fcw" 2 "fcw" 1 "fcw" 0 "no_fcw" ;
 VAL_ 780 HUD_LEAD 3 "no_car" 2 "solid_car" 1 "dashed_car" 0 "no_car" ;
 VAL_ 829 BEEP 3 "single_beep" 2 "triple_beep" 1 "repeated_beep" 0 "no_beep" ;
-
 CM_ "CHFFR_METRIC 342 STEER_ANGLE STEER_ANGLE 0.36 180; CHFFR_METRIC 380 ENGINE_RPM ENGINE_RPM 1 0; CHFFR_METRIC 804 ENGINE_TEMPERATURE ENGINE_TEMPERATURE 1 0";
